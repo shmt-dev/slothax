@@ -1,0 +1,554 @@
+/* style.css file */
+
+/*
+-----------------------------------------------
+Blogger Template Style - Converted to CSS Custom Properties
+Name:      Simple
+Designer: Blogger
+URL:       www.blogger.com
+-----------------------------------------------
+*/
+
+/* CSS Custom Properties (Variables)
+===================================== */
+:root {
+  --keycolor: #cc6611;
+
+  /* Page Text */
+  --body-font: normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  --body-text-color: #222222;
+
+  /* Backgrounds */
+  --body-background-color: #eeaa00;
+  --content-background-color: #ffffff;
+  --header-background-color: #cc6611;
+
+  /* Links */
+  --link-color: #cc6611;
+  --link-visited-color: #888888;
+  --link-hover-color: #ff9900;
+
+  /* Blog Title */
+  --header-font: normal normal 60px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  --header-text-color: #ffffff;
+
+  /* Blog Description */
+  --description-text-color: #ffffff;
+
+  /* Tabs Text */
+  --tabs-font: normal normal 14px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  --tabs-text-color: #999999;
+  --tabs-selected-text-color: #000000;
+
+  /* Tabs Background */
+  --tabs-background-color: #f5f5f5;
+  --tabs-selected-background-color: #eeeeee;
+
+  /* Post Title */
+  --post-title-font: normal normal 22px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+
+  /* Date Header */
+  --date-header-color: var(--body-text-color); /* References another variable */
+  --date-header-background-color: transparent;
+  --date-header-font: normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  --date-header-padding: inherit;
+  --date-header-letterspacing: inherit;
+  --date-header-margin: inherit;
+
+  /* Post Footer */
+  --post-footer-text-color: #666666;
+  --post-footer-background-color: #f9f9f9;
+  --post-footer-border-color: #eeeeee;
+
+  /* Gadgets */
+  --widget-title-font: normal bold 11px Arial, Tahoma, Helvetica, FreeSans, sans-serif;
+  --widget-title-text-color: #000000;
+  --widget-alternate-text-color: #999999;
+
+  /* Images */
+  --image-background-color: #ffffff;
+  --image-border-color: #eeeeee;
+  --image-text-color: var(--body-text-color); /* References another variable */
+
+  /* Accents */
+  --body-rule-color: #eeeeee;
+  --tabs-border-color: var(--body-rule-color); /* References another variable */
+
+  /* Global Layout Variables (from previous conversion) */
+  --content-width: 960px;
+  --main-column-left-width: 0px;
+  --main-column-right-width: 310px;
+
+  --body-background: var(--body-background-color) none repeat scroll top left;
+  --body-background-override: ''; /* Default empty string */
+  --body-background-gradient-cap: url(https://resources.blogblog.com/blogblog/data/1kt/simple/gradients_light.png);
+  --body-background-gradient-tile: url(https://resources.blogblog.com/blogblog/data/1kt/simple/body_gradient_tile_light.png);
+
+  --content-background-color-selector: .content-inner;
+  --content-padding: 10px;
+  --content-padding-horizontal: var(--content-padding);
+  --content-shadow-spread: 40px;
+  --content-shadow-spread-webkit: 5px;
+  --content-shadow-spread-ie: 10px;
+
+  --main-border-width: 0px;
+
+  --header-background-gradient: none; /* Changed from url to 'none' based on default value */
+  --header-shadow-offset-left: 1px; /* Changed from -1px default, using value */
+  --header-shadow-offset-top: 2px; /* Changed from -1px default, using value */
+  --header-shadow-spread: 3px; /* Changed from 1px default, using value */
+  --header-padding: 30px;
+
+  --header-border-size: 0px; /* Changed from 1px default, using value */
+  --header-bottom-border-size: var(--header-border-size);
+  --header-border-horizontalsize: 0px;
+
+  --description-text-size: 140%;
+
+  --tabs-margin-top: 0px;
+  --tabs-margin-side: 30px;
+  --tabs-background-gradient: url(https://resources.blogblog.com/blogblog/data/1kt/simple/gradients_light.png);
+  --tabs-border-width: 1px;
+  --tabs-bevel-border-width: 1px;
+
+  --post-margin-bottom: 25px;
+
+  --image-border-small-size: 2px;
+  --image-border-large-size: 5px;
+
+  --page-width-selector: .region-inner;
+  --page-width: auto;
+
+  --main-section-margin: 15px;
+  --main-padding: 15px;
+  --main-padding-top: 30px;
+  --main-padding-bottom: 30px;
+
+  --paging-background: var(--content-background-color) none no-repeat scroll top center;
+
+  --footer-bevel: 0px;
+
+  --mobile-background-overlay: transparent none repeat scroll top left;
+  --mobile-background-size: auto;
+  --mobile-button-color: #ffffff;
+
+  --start-side: left; /* CSS property name will replace this later */
+  --end-side: right; /* CSS property name will replace this later */
+}
+
+/* Content
+----------------------------------------------- */
+
+body {
+  font: var(--body-font);
+  color: var(--body-text-color);
+  background: var(--body-background);
+  padding: 0 var(--content-shadow-spread) var(--content-shadow-spread) var(--content-shadow-spread);
+  /* var(--body-background-override); */ /* Removed as its default is empty and doesn't add a property */
+}
+
+/* html body var(--page-width-selector) {  This selector usage might not work directly as a variable */
+
+html body .region-inner{ /* This selector usage might not work directly as a variable */
+  min-width: 0;
+  max-width: 100%;
+  width: var(--page-width);
+}
+
+h2 {
+  font-size: 22px;
+}
+
+a:link {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+a:visited {
+  text-decoration: none;
+  color: var(--link-visited-color);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
+.body-fauxcolumn-outer .fauxcolumn-inner {
+  background: transparent var(--body-background-gradient-tile) repeat scroll top left;
+  /* _background-image: none; */ /* IE hack */
+}
+
+.body-fauxcolumn-outer .cap-top {
+  position: absolute;
+  z-index: 1;
+  height: 400px;
+  width: 100%;
+}
+
+.body-fauxcolumn-outer .cap-top .cap-left {
+  width: 100%;
+  background: transparent var(--body-background-gradient-cap) repeat-x scroll top left;
+  /* _background-image: none; */ /* IE hack */
+}
+
+.content-outer {
+  -moz-box-shadow: 0 0 var(--content-shadow-spread) rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 0 var(--content-shadow-spread-webkit) rgba(0, 0, 0, .15);
+  /* -goog-ms-box-shadow: 0 0 var(--content-shadow-spread-ie) #333333; */ /* IE hack */
+  box-shadow: 0 0 var(--content-shadow-spread) rgba(0, 0, 0, .15);
+
+  margin-bottom: 1px;
+}
+
+.content-inner {
+  padding: var(--content-padding) var(--content-padding-horizontal);
+}
+
+/* Original selector is a variable, using its default value: .content-inner */
+.content-inner {
+  background-color: var(--content-background-color);
+}
+
+/* Header
+----------------------------------------------- */
+.header-outer {
+  background: var(--header-background-color) var(--header-background-gradient) repeat-x scroll 0 -400px;
+  /* _background-image: none; */ /* IE hack */
+}
+
+.Header h1 {
+  font: var(--header-font);
+  color: var(--header-text-color);
+  text-shadow: var(--header-shadow-offset-left) var(--header-shadow-offset-top) var(--header-shadow-spread) rgba(0, 0, 0, .2);
+}
+
+.Header h1 a {
+  color: var(--header-text-color);
+}
+
+.Header .description {
+  font-size: var(--description-text-size);
+  color: var(--description-text-color);
+}
+
+.header-inner .Header .titlewrapper {
+  padding: 22px var(--header-padding);
+}
+
+.header-inner .Header .descriptionwrapper {
+  padding: 0 var(--header-padding);
+}
+
+/* Tabs
+----------------------------------------------- */
+.tabs-inner .section:first-child {
+  border-top: var(--header-bottom-border-size) solid var(--tabs-border-color);
+}
+
+.tabs-inner .section:first-child ul {
+  margin-top: calc(-1 * var(--header-border-size));
+  border-top: var(--header-border-size) solid var(--tabs-border-color);
+  border-left: var(--header-border-horizontalsize) solid var(--tabs-border-color);
+  border-right: var(--header-border-horizontalsize) solid var(--tabs-border-color);
+}
+
+.tabs-inner .widget ul {
+  background: var(--tabs-background-color) var(--tabs-background-gradient) repeat-x scroll 0 -800px;
+  /* _background-image: none; */ /* IE hack */
+  border-bottom: var(--tabs-border-width) solid var(--tabs-border-color);
+
+  margin-top: var(--tabs-margin-top);
+  margin-left: calc(-1 * var(--tabs-margin-side));
+  margin-right: calc(-1 * var(--tabs-margin-side));
+}
+
+.tabs-inner .widget li a {
+  display: inline-block;
+
+  padding: .6em 1em;
+
+  font: var(--tabs-font);
+  color: var(--tabs-text-color);
+
+  /* Using `border-left` and `border-right` directly instead of `border-$startSide` / `border-$endSide` */
+  border-left: var(--tabs-border-width) solid var(--content-background-color);
+  border-right: var(--tabs-bevel-border-width) solid var(--tabs-border-color);
+}
+
+.tabs-inner .widget li:first-child a {
+  border-left: none; /* Was border-$startSide */
+}
+
+.tabs-inner .widget li.selected a, .tabs-inner .widget li a:hover {
+  color: var(--tabs-selected-text-color);
+  background-color: var(--tabs-selected-background-color);
+  text-decoration: none;
+}
+
+/* Columns
+----------------------------------------------- */
+.main-outer {
+  border-top: var(--main-border-width) solid var(--body-rule-color);
+}
+
+.fauxcolumn-left-outer .fauxcolumn-inner {
+  border-right: 1px solid var(--body-rule-color);
+}
+
+.fauxcolumn-right-outer .fauxcolumn-inner {
+  border-left: 1px solid var(--body-rule-color);
+}
+
+/* Headings
+----------------------------------------------- */
+div.widget > h2,
+div.widget h2.title {
+  margin: 0 0 1em 0;
+
+  font: var(--widget-title-font);
+  color: var(--widget-title-text-color);
+}
+
+/* Widgets
+----------------------------------------------- */
+.widget .zippy {
+  color: var(--widget-alternate-text-color);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.widget .popular-posts ul {
+  list-style: none;
+}
+
+/* Posts
+----------------------------------------------- */
+h2.date-header {
+  font: var(--date-header-font);
+}
+
+.date-header span {
+  background-color: var(--date-header-background-color);
+  color: var(--date-header-color);
+  padding: var(--date-header-padding);
+  letter-spacing: var(--date-header-letterspacing);
+  margin: var(--date-header-margin);
+}
+
+.main-inner {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+
+.main-inner .column-center-inner {
+  padding: 0 var(--main-padding);
+}
+
+.main-inner .column-center-inner .section {
+  margin: 0 var(--main-section-margin);
+}
+
+.post {
+  margin: 0 0 var(--post-margin-bottom) 0;
+}
+
+h3.post-title, .comments h4 {
+  font: var(--post-title-font);
+  margin: .75em 0 0;
+}
+
+.post-body {
+  font-size: 110%;
+  line-height: 1.4;
+  position: relative;
+}
+
+.post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
+.BlogList .item-thumbnail img {
+  padding: var(--image-border-small-size);
+
+  background: var(--image-background-color);
+  border: 1px solid var(--image-border-color);
+
+  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+
+.post-body img, .post-body .tr-caption-container {
+  padding: var(--image-border-large-size);
+}
+
+.post-body .tr-caption-container {
+  color: var(--image-text-color);
+}
+
+.post-body .tr-caption-container img {
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 rgba(0, 0, 0, .1);
+}
+
+.post-header {
+  margin: 0 0 1.5em;
+
+  line-height: 1.6;
+  font-size: 90%;
+}
+
+.post-footer {
+  margin: 20px -2px 0;
+  padding: 5px 10px;
+
+  color: var(--post-footer-text-color);
+  background-color: var(--post-footer-background-color);
+  border-bottom: 1px solid var(--post-footer-border-color);
+
+  line-height: 1.6;
+  font-size: 90%;
+}
+
+#comments .comment-author {
+  padding-top: 1.5em;
+
+  border-top: 1px solid var(--body-rule-color);
+  background-position: 0 1.5em;
+}
+
+#comments .comment-author:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.avatar-image-container {
+  margin: .2em 0 0;
+}
+
+#comments .avatar-image-container img {
+  border: 1px solid var(--image-border-color);
+}
+
+/* Comments
+----------------------------------------------- */
+.comments .comments-content .icon.blog-author {
+  background-repeat: no-repeat;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB9sLFwMeCjjhcOMAAAD+SURBVDjLtZSvTgNBEIe/WRRnm3U8RC1neQdsm1zSBIU9VVF1FkUguQQsD9ITmD7ECZIJSE4OZo9stoVjC/zc7ky+zH9hXwVwDpTAWWLrgS3QAe8AZgaAJI5zYAmc8r0G4AHYHQKVwII8PZrZFsBFkeRCABYiMh9BRUhnSkPTNCtVXYXURi1FpBDgArj8QU1eVXUzfnjv7yP7kwu1mYrkWlU33vs1QNu2qU8pwN0UpKoqokjWwCztrMuBhEhmh8bD5UDqur75asbcX0BGUB9/HAMB+r32hznJgXy2v0sGLBcyAJ1EK3LFcbo1s91JeLwAbwGYu7TP/3ZGfnXYPgAVNngtqatUNgAAAABJRU5ErkJggg==);
+}
+
+.comments .comments-content .loadmore a {
+  border-top: 1px solid var(--widget-alternate-text-color);
+  border-bottom: 1px solid var(--widget-alternate-text-color);
+}
+
+.comments .comment-thread.inline-thread {
+  background-color: var(--post-footer-background-color);
+}
+
+.comments .continue {
+  border-top: 2px solid var(--widget-alternate-text-color);
+}
+
+/* Accents
+---------------------------------------------- */
+.section-columns td.columns-cell {
+  border-left: 1px solid var(--body-rule-color); /* Was border-$startSide */
+}
+
+.blog-pager {
+  background: var(--paging-background);
+}
+
+.blog-pager-older-link, .home-link,
+.blog-pager-newer-link {
+  background-color: var(--content-background-color);
+  padding: 5px;
+}
+
+.footer-outer {
+  border-top: var(--footer-bevel) dashed #bbbbbb;
+}
+
+/* Mobile
+----------------------------------------------- */
+body.mobile {
+  background-size: var(--mobile-background-size);
+}
+
+.mobile .body-fauxcolumn-outer {
+  background: var(--mobile-background-overlay);
+}
+
+.mobile .body-fauxcolumn-outer .cap-top {
+  background-size: 100% auto;
+}
+
+.mobile .content-outer {
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, .15);
+}
+
+.mobile .tabs-inner .widget ul {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mobile .post {
+  margin: 0;
+}
+
+.mobile .main-inner .column-center-inner .section {
+  margin: 0;
+}
+
+.mobile .date-header span {
+  padding: 0.1em 10px;
+  margin: 0 -10px;
+}
+
+.mobile h3.post-title {
+  margin: 0;
+}
+
+.mobile .blog-pager {
+  background: transparent none no-repeat scroll top center;
+}
+
+.mobile .footer-outer {
+  border-top: none;
+}
+
+.mobile .main-inner, .mobile .footer-inner {
+  background-color: var(--content-background-color);
+}
+
+.mobile-index-contents {
+  color: var(--body-text-color);
+}
+
+.mobile-link-button {
+  background-color: var(--link-color);
+}
+
+.mobile-link-button a:link, .mobile-link-button a:visited {
+  color: var(--mobile-button-color);
+}
+
+.mobile .tabs-inner .section:first-child {
+  border-top: none;
+}
+
+.mobile .tabs-inner .PageList .widget-content {
+  background-color: var(--tabs-selected-background-color);
+  color: var(--tabs-selected-text-color);
+  border-top: var(--tabs-border-width) solid var(--tabs-border-color);
+  border-bottom: var(--tabs-border-width) solid var(--tabs-border-color);
+}
+
+.mobile .tabs-inner .PageList .widget-content .pagelist-arrow {
+  border-left: 1px solid var(--tabs-border-color); /* Was border-$startSide */
+}
