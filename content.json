@@ -1,0 +1,353 @@
+[
+  {
+    "NJK": ["JILI", "https://cdn.sasasa.click/img/sportsbook/provider/NJK/NJK_1712909624.png"],
+    "AMBS": ["ASKMEBET", "https://cdn.sasasa.click/img/sportsbook/provider/AMBS/AMBS_1695291636.png"]
+  },
+  {
+    "title": "Super Ace X",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Super%20Ace%20X_1748546034.webp",
+    "id": "Super-Ace-X",
+    "description": "Play Super Ace X, smile, and win! Experience pure delight with every exciting spin.",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mahjong Legacy",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mahjong%20Legacy_1748545013.webp",
+    "id": "Mahjong-Legacy",
+    "description": "NJK Hello World",
+    "provider": "NJK"
+  },
+  {
+    "title": "Aztec Legend",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Aztec%20Legend_1747733660.webp",
+    "id": "Aztec-Legend",
+    "description": "Hello ",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Natural Ace",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Natural%20Ace_1745582611.webp",
+    "id": "Natural-Ace",
+    "description": "",
+    "provider": "NJK"
+  },
+  {
+    "title": "Clash of Wars",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Clash%20of%20Wars_1740986515.webp",
+    "id": "Clash-of-Wars",
+    "description": "",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Tiki Paradise",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Tiki%20Paradise_1731655103.webp",
+    "id": "Tiki-Paradise",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Nova Crash",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Nova%20Crash_1727435945.webp",
+    "id": "Nova-Crash",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mafia Ways II: Metro Haven Heist",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mafia%20Ways%20II:%20Metro%20Haven%20Heist_1726831568.webp",
+    "id": "Mafia-Ways-II-Metro-Haven-Heist",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Golden Blackjack 21",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Golden%20Blackjack%2021_1725963569.webp",
+    "id": "Golden-Blackjack-21",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Guardian Wealth",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Guardian%20Wealth_1747294869.webp",
+    "id": "Guardian-Wealth",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Wizard Dice",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Wizard%20Dice_1727268136.webp",
+    "id": "Wizard-Dice",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Rabbit Mines",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Rabbit%20Mines_1727266851.webp",
+    "id": "Rabbit-Mines",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Subway Runner",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Subway%20Runner_1727252224.webp",
+    "id": "Subway-Runner",
+    "provider": "AMBS"
+  },
+  {
+    "title": "The Monkey King",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_The%20Monkey%20King_1711090543.jpg",
+    "id": "The-Monkey-King",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Blessing of the Dragon",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Blessing%20of%20the%20Dragon_1727263529.webp",
+    "id": "Blessing-of-the-Dragon",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Alice's Wonder",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Alice%27s%20Wonder_1727263426.webp",
+    "id": "Alice's-Wonder",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mahjong Legend Xmas",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mahjong%20Legend%20Xmas_1734695352.webp",
+    "id": "Mahjong-Legend-Xmas",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Fishing's Paradise",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Fishing%27s%20Paradise_1727264136.webp",
+    "id": "Fishings-Paradise",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Wonder cuisine",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Wonder%20cuisine_1727268285.webp",
+    "id": "Wonder-cuisine",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Kingdom Z",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Kingdom%20Z_1727264954.webp",
+    "id": "Kingdom-Z",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Epic of Aztec",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Epic%20of%20Aztec_1727264070.webp",
+    "id": "Epic-of-Aztec",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Blessing of the Tiger",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Blessing%20of%20the%20Tiger_1727263655.webp",
+    "id": "Blessing-of-the-Tiger",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Moe Moe Cute",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Moe%20Moe%20Cute_1727266260.webp",
+    "id": "Moe-Moe-Cute",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Veggies Bonanza",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Veggies%20Bonanza_1727267987.webp",
+    "id": "Veggies-Bonanza",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Lucky Nang Kwak",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Lucky%20Nang%20Kwak_1727265938.webp",
+    "id": "Lucky-Nang-Kwak",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mafia Ways",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mafia%20Ways_1727266021.webp",
+    "id": "Mafia-Ways",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mermaid's Market",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mermaid%27s%20Market_1727266232.webp",
+    "id": "Mermaids-Market",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Mahjong Legend",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Mahjong%20Legend_1705662704.webp",
+    "id": "Mahjong-Legend",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Centillion Gods",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Centillion%20Gods_1727263687.webp",
+    "id": "Centillion-Gods",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Dino Gems",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Dino%20Gems_1727263749.webp",
+    "id": "Dino-Gems",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Cupid's Garden",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Cupid%27s%20Garden_1727263725.webp",
+    "id": "Cupids-Garden",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Government Disco",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Government%20Disco_1727264389.webp",
+    "id": "Government-Disco",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Lab 19 mania",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Lab%2019%20mania_1727265090.webp",
+    "id": "Lab-19-mania",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Roma Plus",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Roma%20Plus_1727267301.webp",
+    "id": "Roma-Plus",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Squid Toon",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Squid%20Toon_1727267685.webp",
+    "id": "Squid-Toon",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Fruit Roulette Slots",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Fruit%20Roulette%20Slots_1727264189.webp",
+    "id": "Fruit-Roulette-Slots",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Royal Thai Dessert",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Royal%20Thai%20Dessert_1727267435.webp",
+    "id": "Royal-Thai-Dessert",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Dino Pops",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Dino%20Pops_1727263758.webp",
+    "id": "Dino-Pops",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Shiba Mogul",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Shiba%20Mogul_1727267502.webp",
+    "id": "Shiba-Mogul",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Little Monster",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Little%20Monster_1727265864.webp",
+    "id": "Little-Monster",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Wrath of Egypt",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Wrath%20of%20Egypt_1727252407.webp",
+    "id": "Wrath-of-Egypt",
+    "provider": "AMBS"
+  },
+  {
+    "title": "The King Joker",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_The%20King%20Joker_1727267733.webp",
+    "id": "The-King-Joker",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Punk Star",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Punk%20Star_1727266742.webp",
+    "id": "Punk-Star",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Zushi Prime",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Zushi%20Prime_1727268383.webp",
+    "id": "Zushi-Prime",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Blessing of The OX",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Blessing%20of%20The%20OX_1727263491.webp",
+    "id": "Blessing-of-The-OX",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Legend of shooter",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Legend%20of%20shooter_1727265165.webp",
+    "id": "Legend-of-shooter",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Grandshine",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Grandshine_1727264433.webp",
+    "id": "Grandshine",
+    "provider": "AMBS"
+  },
+  {
+    "title": "HungryKrahung",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_HungryKrahung_1727264776.webp",
+    "id": "HungryKrahung",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Real Slap",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Real%20Slap_1727267110.webp",
+    "id": "Real-Slap",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Ghost House",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Ghost%20House_1727264241.webp",
+    "id": "Ghost-House",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Kraken Treasure",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Kraken%20Treasure_1727264994.webp",
+    "id": "Kraken-Treasure",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Rich Rich Water",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Rich%20Rich%20Water_1727267161.webp",
+    "id": "Rich-Rich-Water",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Vampire Hunter",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Vampire%20Hunter_1727268196.webp",
+    "id": "Vampire-Hunter",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Bomb Defusal",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Bomb%20Defusal_1727263673.webp",
+    "id": "Bomb-Defusal",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Drop Racing",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Drop%20Racing_1727267002.webp",
+    "id": "Drop-Racing",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Horse racing",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Horse%20racing_1727264750.webp",
+    "id": "Horse-racing",
+    "provider": "AMBS"
+  },
+  {
+    "title": "Pet Ranger",
+    "image": "https://cdn.sasasa.click/img/sportsbook/game/AMBS/S/AMBS_Pet%20Ranger_1727266697.webp",
+    "id": "Pet-Ranger",
+    "provider": "AMBS"
+  }
+]

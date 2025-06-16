@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --primary-color: rgb(25, 121, 106);
+      --primary-blur-opcity: rgb(25, 121, 106, 0.6);
+      --dark-color: rgb(44, 43, 43);
+      --gray-light: rgb(242, 242, 242);
+      --gray-dark: rgb(217, 217, 217);
+      --red-color: rgb(254, 61, 106);
+      --green-color: rgb(26, 160, 17);
+      --blue-color: rgb(32, 122, 158);
+      --fade-color: rgb(255, 255, 255, 0.6);
+      --h: 50px;
+      --b: 0px;
+      --button-border-size: 6px;
+      --main-width: 768px;
+      --gap-width: 20px;
+      --footer-high: 50px;
+      --winrate: 70%;
+      --energy: 50%;
+      --cards-per-row: 2;
+    }
+
+    @media (min-width: 320px) {
+
+      .featured-post,
+      .card-container {
+        min-width: 320px;
+      }
+    }
+
+    @media (min-width: 375px) {
+      .featured-post {
+        min-width: 375px;
+      }
+    }
+
+    @media (min-width: 425px) {
+      .featured-post {
+        min-width: 425px;
+      }
+    }
+
+    @media (min-width: 576px) {
+      .featured-post {
+        min-width: 576px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .featured-post {
+        min-width: 768px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .featured-post {
+        min-width: 768px;
+      }
+    }
+
+    img {
+      -webkit-user-select: none;
+      /* Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Standard syntax */
+      pointer-events: none;
+      -webkit-user-drag: none;
+    }
+
+    no-select {
+      -webkit-user-select: none;
+      /* Safari */
+      -moz-user-select: none;
+      /* Firefox */
+      -ms-user-select: none;
+      /* Internet Explorer/Edge */
+      user-select: none;
+      /* Standard syntax */
+      /* pointer-events: none; */
+      -webkit-user-drag: none;
+    }
+
+    body {
+      margin: 0;
+      border: none;
+      padding: 0;
+      background-color: var(--dark-color);
+      font-family: "Rubik", sans-serif;
+      color: var(--gray-light);
+    }
+
+    /* Header styling */
+    .header {
+      background-color: var(--primary-color);
+      color: var(--gray-light);
+      text-align: center;
+      padding: 1px;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Advertisement styling */
+    .advertisement--top {
+      width: 100%;
+      height: 200px;
+      padding: 30px;
+      border: 3px dashed var(--gray-dark);
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .advertisement--middle {
+      width: 100%;
+      height: 100px;
+      padding: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .advertisement--top h2,
+    .advertisement--middle h2 {
+      background: green;
+      margin: 0;
+      border: 3px dashed var(--gray-dark);
+      /* Optional border for ads */
+    }
+
+    /* .advertisement--top h2 {
+        height: 200px;
+      } */
+
+    /* .advertisement--middle h2 {
+        height: 100px;
+      } */
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      background: red;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      /* min-width: 320px; */
+      max-width: var(--main-width);
+      background: #000;
+    }
+
+    /* Featured post styling */
+    .featured-post {
+      display: flex;
+      flex-direction: column;
+      max-width: var(--main-width);
+      /* min-width: 320px; */
+      width: 100%;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+      background-color: var(--primary-color);
+      transition: all 0.3s ease-in-out;
+      flex-grow: 1;
+    }
+
+    .featured-post:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+      transform: scale(0.9);
+      border-radius: 15px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .featured-post__image-placeholder {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      aspect-ratio: 5 / 3;
+      background-image: url("https://cdn.sasasa.click/img/sportsbook/game/AMP/S/AMP_The%20Legend%20of%20Ne%20Zha_1727276034.webp");
+    }
+
+    .featured-post__content {
+      background-color: var(--primary-blur-opcity);
+      backdrop-filter: blur(10px);
+      margin-top: -10%;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      padding: 18px;
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+    }
+
+    .featured-post__provider-icon {
+      width: 80px;
+      flex-shrink: 0;
+      height: 80px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 15px;
+      aspect-ratio: 1;
+      background-image: url("https://public.pg-demo.com/pages/static/image/en/Small_Icon/61/app_icon_small@3x-3d69bbf5.png");
+    }
+
+    .featured-post__detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-post__title {
+      font-size: 1.2em;
+      color: var(--gray-light);
+      margin-bottom: 5px;
+    }
+
+    .featured-post__description {
+      font-size: 1em;
+      color: var(--fade-color);
+      font-size: 0.8em;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .stats__item {
+      text-align: center;
+      flex: 1;
+      color: var(--gray-light);
+      padding: 10px;
+    }
+
+    .stats__item h2 {
+      margin: 0;
+      font-size: 1.1em;
+    }
+
+    .stats__item span {
+      margin-top: 4px;
+      margin-bottom: 12px;
+      display: block;
+      color: var(--fade-color);
+    }
+
+    .percent-container {
+      max-width: 100%;
+      padding: 30px 20px;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .progress-bar:first-of-type {
+      margin-bottom: 15px;
+      /* Space between winrate and energy bars */
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 30px;
+      background-color: var(--gray-dark);
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .progress-bar__fill {
+      height: 100%;
+      border-radius: 15px 0 0 15px;
+      position: absolute;
+    }
+
+    .progress-bar__fill--winrate {
+      background: linear-gradient(color-mix(in srgb, var(--green-color) 50%, transparent),
+          transparent),
+        conic-gradient(from -30deg at 25%,
+          transparent 240deg,
+          var(--green-color) 0%) 0 / calc(var(--h) - 2 * var(--b)),
+        conic-gradient(from -30deg at 75%,
+          var(--green-color) 240deg,
+          color-mix(in srgb, var(--green-color) 80%, black) 0%) 0 / calc(var(--h) - 2 * var(--b));
+      animation: winrate-load 3s normal forwards;
+    }
+
+    @keyframes winrate-load {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: var(--winrate);
+      }
+    }
+
+    .progress-bar__fill--energy {
+      background: linear-gradient(color-mix(in srgb, var(--blue-color) 50%, transparent),
+          transparent),
+        conic-gradient(from -30deg at 25%,
+          transparent 240deg,
+          var(--blue-color) 0%) 0 / calc(var(--h) - 2 * var(--b)),
+        conic-gradient(from -30deg at 75%,
+          var(--blue-color) 240deg,
+          color-mix(in srgb, var(--blue-color) 80%, black) 0%) 0 / calc(var(--h) - 2 * var(--b));
+      animation: energy-load 3s normal forwards;
+    }
+
+    @keyframes energy-load {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: var(--energy);
+      }
+    }
+
+    .progress-bar span {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray-light);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .progress-bar b {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgb(0, 0, 0);
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Adjust featured-post__provider-icon height to match title+description */
+    /* .featured-post__provider-icon {
+            align-self: stretch;
+            height: auto;
+        } */
+
+    /* Game cards styling */
+    .game-cards {
+      margin-top: 10px;
+      display: flex;
+      width: 90%;
+      flex-wrap: wrap;
+      gap: var(--gap-width);
+      justify-content: center;
+    }
+
+    .game-card {
+      display: flex;
+      flex-direction: column;
+      flex-basis: calc((100% / var(--cards-per-row)) - (var(--cards-per-row) - 1) * var(--gap-width) / var(--cards-per-row) - 0.1px);
+      /* width: calc((100% / var(--view)) - (var(--gap-width) * var(--view))); */
+      /* max-width: calc((var(--main-width) / var(--view)) - (var(--gap-width) * var(--view))); */
+      /* max-width: calc(var(--main-width) / 3 - var(--gap-width)*3); */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      flex-grow: 2 1;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .game-card:hover {
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+      transform: scale(1.025) translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .game-card__image-placeholder {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      aspect-ratio: 5 / 3.2;
+      overflow: hidden;
+      position: relative;
+      background-image: url("https://cdn.sasasa.click/img/sportsbook/game/AMP/S/AMP_The%20Legend%20of%20Ne%20Zha_1727276034.webp");
+    }
+
+    .game-card__button-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      backdrop-filter: saturate(2) blur(5px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .game-card__button {
+      padding: 15px 30px;
+      color: var(--gray-light);
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 50px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      border: none;
+      overflow: hidden;
+      position: relative;
+      transform: scale(80%);
+      /* ::before အတွက် parent အဖြစ် */
+      background: linear-gradient(to top,
+          var(--primary-color),
+          color-mix(in srgb, var(--primary-color), black 20%));
+    }
+
+    .game-card__button::before {
+      content: "";
+      position: absolute;
+      top: var(--button-border-size);
+      left: var(--button-border-size);
+      right: var(--button-border-size);
+      bottom: var(--button-border-size);
+
+      z-index: -1;
+      border-radius: calc(50px + var(--button-border-size) * 2);
+
+      /* Border (::before) အတွက် background gradient */
+      background: linear-gradient(to bottom,
+          var(--primary-color),
+          color-mix(in srgb, var(--primary-color), black 50%));
+    }
+
+    .game-card__image-placeholder:hover .game-card__button-container {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .game-card__title {
+      position: absolute;
+      visibility: hidden;
+      margin: 0;
+      padding: 0;
+      bottom: 21px;
+      line-height: 30px;
+      text-align: left;
+      padding-left: 20px;
+      width: 100%;
+      color: var(--gray-light);
+      background-color: var(--primary-color);
+      letter-spacing: 1.5px;
+      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+      font-size: 1.2em;
+      z-index: 1;
+    }
+
+    .game-card__progress-bar {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      bottom: 0px;
+      width: 100%;
+      height: 15%;
+      background-color: rgb(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      border-top: var(--gray-dark) 2px solid;
+    }
+
+    .game-card__progress-bar-fill {
+      height: 100%;
+      width: 20%;
+      /* Example width, adjust as needed */
+      position: absolute;
+      background: linear-gradient(to right,
+          color-mix(in srgb, var(--green-color), black 20%),
+          var(--green-color));
+      animation: game-card__winrate 3s normal forwards;
+    }
+
+    @keyframes game-card__winrate {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: var(--winrate);
+      }
+    }
+
+    /* Navigation styling */
+    .navigation {
+      position: fixed;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: var(--primary-color);
+      box-shadow: 0px -3px 10px rgb(0, 0, 0, 0.6);
+    }
+
+    .navigation__buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .navigation__button {
+      position: relative;
+      color: var(--gray-light);
+      height: var(--footer-high);
+      font-size: 0.8em;
+      cursor: pointer;
+      flex: 1;
+      /* Allows buttons to take equal width */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 4px;
+      background-color: transparent;
+      border: none;
+      border-left: 1px solid rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    .navigation__button:nth-child(1) {
+      border-left: none;
+    }
+
+    .lock-state {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: var(--gray-light);
+      font-size: 1em;
+      border-radius: 50%;
+      padding: 5px;
+      margin-top: 5%;
+      margin-right: 20%;
+      background-color: var(--red-color);
+      /* visibility: hidden; */
+    }
+
+    .selected {
+      background-color: rgb(0, 0, 0, 0.2);
+    }
+
+    .footer-space {
+      height: var(--footer-high);
+      width: 100%;
+    }
+
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: var(--gray-light);
+      font-size: 2em;
+      cursor: pointer;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>Sample Blog Title</h1>
+  </div>
+  <div class="main-container">
+    <div class="card-container">
+      <!-- <div class="advertisement--top">
+          <h2>Top Advertisement Here</h2>
+        </div> -->
+
+      <div id="featured-post-section" style="display: none;"></div>
+
+      <!-- <div class="advertisement--middle">
+          <h2>Middle Advertisement Here</h2>
+        </div> -->
+
+      <div id="game-cards-section" class="game-cards"></div>
+
+      <!-- <div class="advertisement--middle">
+          <h2>Middle Advertisement Here</h2>
+        </div> -->
+    </div>
+  </div>
+  <div class="footer-space"></div>
+  <div class="navigation">
+    <div class="navigation__buttons">
+      <button class="navigation__button selected" onclick="toggleSection('home')">
+        <i class="material-icons">other_houses</i>
+        <span>Home</span>
+      </button>
+      <button class="navigation__button" onclick="toggleSection('view')">
+        <i class="material-icons-outlined">dashboard</i>
+        <span>View</span>
+        <i class="material-icons lock-state">lock</i>
+      </button>
+      <button class="navigation__button" onclick="toggleSection('topset')">
+        <i class="material-icons-outlined">leaderboard</i>
+        <span>Topset</span>
+        <i class="material-icons lock-state">lock</i>
+      </button>
+      <button class="navigation__button" onclick="toggleSection('provider')">
+        <i class="material-icons-outlined">account_tree</i>
+        <span>Provider</span>
+        <i class="material-icons lock-state">lock</i>
+      </button>
+      <button class="navigation__button selected" onclick="toggleSection('unlock')">
+        <i class="material-icons-outlined">lock</i>
+        <span>Unlock</span>
+      </button>
+    </div>
+  </div>
+
+  <script>
+    let contentData = [];
+    let apiData = [];
+    let providerIcons = {};
+
+    const featuredPostSection = document.getElementById('featured-post-section');
+    const gameCardsSection = document.getElementById('game-cards-section');
+
+    async function fetchData() {
+      try {
+        const contentResponse = await fetch('content.json');
+        contentData = await contentResponse.json();
+        providerIcons = contentData[0]; // Assuming provider icons are the first object
+        contentData = contentData.slice(1); // Remove provider icons from main content
+
+        const apiResponse = await fetch('api.json');
+        apiData = await apiResponse.json();
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    }
+
+    function calculateWinRateStatus(winrate) {
+      if (winrate >= 75) {
+        return 'HIGH';
+      } else if (winrate >= 45) {
+        return 'MEDIUM';
+      } else {
+        return 'LOW';
+      }
+    }
+
+    function calculateEnergyStatus(energy) {
+      if (energy >= 75) {
+        return 'HIGH';
+      } else if (energy >= 45) {
+        return 'MEDIUM';
+      } else {
+        return 'LOW';
+      }
+    }
+
+    function calculatePopularStatus(winrate, energy) {
+      const average = (winrate + energy) / 2;
+      if (average >= 75) {
+        return 'HIGH';
+      } else if (average >= 45) {
+        return 'MEDIUM';
+      } else {
+        return 'LOW';
+      }
+    }
+
+    function calculateLikeStatus(winrateStatus, energyStatus) {
+      const statusOrder = ['LOW', 'MEDIUM', 'HIGH'];
+      const winrateIndex = statusOrder.indexOf(winrateStatus);
+      const energyIndex = statusOrder.indexOf(energyStatus);
+      return statusOrder[Math.min(winrateIndex, energyIndex)];
+    }
+
+    function generateRandomRTP() {
+      const minRTP = 91.00;
+      const maxRTP = 98.50;
+      const randomRTP = (Math.random() * (maxRTP - minRTP) + minRTP).toFixed(2);
+      return `${randomRTP}%`;
+    }
+
+    function calculateRating(winrate, energy) {
+      const value = (winrate + energy) / 20;
+      return `${Math.round(value)}/10`;
+    }
+
+    function renderFeaturedPost(gameId) {
+      const gameContent = contentData.find(game => game.id === gameId);
+      const gameApi = apiData.find(game => game.id === gameId);
+
+      if (!gameContent || !gameApi) {
+        console.error('Game data not found for ID:', gameId);
+        return;
+      }
+
+      const winRateStatus = calculateWinRateStatus(gameApi.winrate);
+      const energyStatus = calculateEnergyStatus(gameApi.energy);
+      const popularStatus = calculatePopularStatus(gameApi.winrate, gameApi.energy);
+      const likeStatus = calculateLikeStatus(winRateStatus, energyStatus);
+      const rtp = generateRandomRTP();
+      const rating = calculateRating(gameApi.winrate, gameApi.energy);
+
+      const featuredPostHtml = `
+          <div class="featured-post">
+            <i class="material-icons back-button" id="featured-post-back-button">arrow_back</i>
+            <div class="featured-post__image-placeholder" style="background-image: url('${gameContent.image}');"></div>
+            <div class="featured-post__content">
+              <div class="featured-post__provider-icon" style="background-image: url('${providerIcons[gameContent.provider]}');"></div>
+              <div class="featured-post__detail">
+                <b class="featured-post__title">${gameContent.title}</b>
+                <span class="featured-post__description">${gameContent.description}</span>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stats__item">
+                <h2>${winRateStatus}</h2>
+                <span>Win Rate</span>
+              </div>
+              <div class="stats__item">
+                <h2>${rtp}</h2>
+                <span>RTP</span>
+              </div>
+              <div class="stats__item">
+                <h2>${energyStatus}</h2>
+                <span>Energy</span>
+              </div>
+            </div>
+            <div class="stats">
+              <div class="stats__item">
+                <h2>${popularStatus}</h2>
+                <span>Popular</span>
+              </div>
+              <div class="stats__item">
+                <h2>${rating}</h2>
+                <span>Rating</span>
+              </div>
+              <div class="stats__item">
+                <h2>${likeStatus}</h2>
+                <span>Like</span>
+              </div>
+            </div>
+            <div class="percent-container">
+              <div class="progress-bar">
+                <div class="progress-bar__fill progress-bar__fill--winrate" style="--winrate: ${gameApi.winrate}%"></div>
+                <span>Win Rate</span>
+                <b>${gameApi.winrate}%</b>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-bar__fill progress-bar__fill--energy" style="--energy: ${gameApi.energy}%"></div>
+                <span>Energy</span>
+                <b>${gameApi.energy}%</b>
+              </div>
+            </div>
+          </div>
+        `;
+
+      featuredPostSection.innerHTML = featuredPostHtml;
+      featuredPostSection.style.display = 'block';
+      gameCardsSection.style.display = 'none';
+
+      document.getElementById('featured-post-back-button').addEventListener('click', () => {
+        history.pushState({ section: 'home' }, '', 'blog.html');
+        renderGameCards();
+      });
+
+      history.pushState({ section: 'featured-post', gameId: gameId }, '', `${gameId}.html`);
+    }
+
+    function renderGameCards() {
+      gameCardsSection.innerHTML = '';
+      const filteredGames = apiData.filter(game => game.winrate > 74);
+
+      filteredGames.forEach(gameApi => {
+        const gameContent = contentData.find(content => content.id === gameApi.id);
+
+        if (gameContent) {
+          const gameCardDiv = document.createElement('div');
+          gameCardDiv.classList.add('game-card');
+          gameCardDiv.innerHTML = `
+              <div class="game-card__image-placeholder" style="background-image: url('${gameContent.image}');">
+                <div class="game-card__title"><b>${gameContent.title}</b></div>
+                <div class="game-card__progress-bar">
+                  <div class="game-card__progress-bar-fill" style="--winrate: ${gameApi.winrate}%"></div>
+                </div>
+                <div class="game-card__button-container">
+                  <button class="game-card__button" data-game-id="${gameApi.id}">Detail</button>
+                </div>
+              </div>
+            `;
+          gameCardsSection.appendChild(gameCardDiv);
+        }
+      });
+
+      gameCardsSection.querySelectorAll('.game-card__button').forEach(button => {
+        button.addEventListener('click', (event) => {
+          const gameId = event.target.dataset.gameId;
+          renderFeaturedPost(gameId);
+        });
+      });
+
+      featuredPostSection.style.display = 'none';
+      gameCardsSection.style.display = 'flex'; // Use flex to maintain layout
+
+      history.pushState({ section: 'home' }, '', 'blog.html');
+    }
+
+    window.addEventListener('popstate', (event) => {
+      if (event.state && event.state.section === 'featured-post') {
+        renderFeaturedPost(event.state.gameId);
+      } else {
+        renderGameCards();
+      }
+    });
+
+    function toggleSection(section) {
+      // This function can remain as is or be adapted based on overall navigation
+      console.log(`Toggling section: ${section}`);
+    }
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      await fetchData();
+
+      const initialGameId = new URLSearchParams(window.location.search).get('gameId');
+      const pathSegments = window.location.pathname.split('/');
+      const lastSegment = pathSegments[pathSegments.length - 1];
+      const initialGameIdFromPath = lastSegment.endsWith('.html') ? lastSegment.replace('.html', '') : null;
+
+      if (initialGameIdFromPath && initialGameIdFromPath !== 'blog') {
+        renderFeaturedPost(initialGameIdFromPath);
+      } else {
+        renderGameCards();
+      }
+    });
+
+  </script>
+</body>
+
+</html>
